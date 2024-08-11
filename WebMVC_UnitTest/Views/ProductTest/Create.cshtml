@@ -1,0 +1,36 @@
+﻿@model WebMVC_UnitTest.Models.Product
+
+@{
+    //Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div>
+        <h1>Create Product</h1>
+
+        @using (Html.BeginForm("Create", "ProductTest", FormMethod.Post))
+        {
+            @Html.LabelFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name)
+
+            @Html.LabelFor(model => model.Category)
+            @Html.TextBoxFor(model => model.Category)
+
+            @Html.LabelFor(model => model.Price)
+            @Html.TextBoxFor(model => model.Price)
+
+            <input type="submit" value="Create" />
+        }
+
+
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>

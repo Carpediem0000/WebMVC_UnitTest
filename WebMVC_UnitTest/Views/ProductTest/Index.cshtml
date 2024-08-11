@@ -1,0 +1,30 @@
+﻿@using WebMVC_UnitTest.Models
+@model IList<Product>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h2>Index</h2>
+    </div>
+    <div>
+        @foreach (Product item in Model)
+        {
+            <h3>
+                @item.Name&nbsp;@item.Category&nbsp;@item.Price
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+            </h3>
+        }
+        <br />
+        @Html.ActionLink("Create", "Create");
+    </div>
+</body>
+</html>

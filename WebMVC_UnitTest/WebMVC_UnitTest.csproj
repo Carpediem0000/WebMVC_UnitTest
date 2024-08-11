@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ProductTestController.cs" />
     <Compile Include="DbClasses\ProductContext.cs" />
     <Compile Include="DbClasses\ProductDbInittializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -108,12 +109,18 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test\DiscountHelper.cs" />
+    <Compile Include="Test\FakeRepository.cs" />
     <Compile Include="Test\IDiscountHelper.cs" />
+    <Compile Include="Test\IProductRepository.cs" />
+    <Compile Include="Test\ProductRepository.cs" />
     <Compile Include="Test\TestCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Views\ProductTest\Index.cshtml" />
+    <Content Include="Views\ProductTest\Create.cshtml" />
+    <Content Include="Views\ProductTest\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -123,7 +130,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
